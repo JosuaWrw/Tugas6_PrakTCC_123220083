@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="box" style="max-width: 400px; margin: auto;">
+                <h1 class="title has-text-centered">Register</h1>
+                <div class="field">
+                    <label class="label">Nama</label>
+                    <div class="control">
+                        <input class="input" type="text" id="name" placeholder="Nama">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                        <input class="input" type="email" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                        <input class="input" type="password" id="password" placeholder="Password">
+                    </div>
+                </div>
+                <button class="button is-primary is-fullwidth" onclick="register()">Daftar</button>
+                <p class="has-text-centered mt-3">
+                    Sudah punya akun? <a href="login.html">Login</a>
+                </p>
+                <p class="has-text-danger mt-2" id="errorMsg"></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

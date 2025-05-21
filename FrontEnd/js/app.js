@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://tugas5be-935996462481.us-central1.run.app/notes")
+  fetch("https://tugas5be-935996462481.us-central1.run.app/notes", {
+    headers: {
+    'Authorization': `Bearer ${localStorage.getItem("accessToken")}`
+  }
+  })
       .then(response => response.json())
       .then(notes => {
           const notesTable = document.getElementById("notesTable");
