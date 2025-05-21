@@ -2,7 +2,7 @@ GET http://localhost:3000/notes
 
 ###
 
-GET http://localhost:3000/notes/1
+GET http://localhost:3000/notes/3
 
 ###
 
@@ -27,3 +27,35 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/notes/1
+
+###
+
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwibmFtZSI6Impvc3VhIiwiZW1haWwiOiJqb3N1YUB0ZXMuY29tIiwiZ2VuZGVyIjoiTWFsZSIsInRhbmdnYWxfZGlidWF0IjoiMjAyNS0wNS0yMVQxMzoxMDoxMy4wMDBaIiwidGFuZ2dhbF9kaXViYWgiOiIyMDI1LTA1LTIxVDE0OjAxOjE1LjAwMFoiLCJpYXQiOjE3NDc4MzYxMDMsImV4cCI6MTc0NzgzNjEzM30.TZVVHBfs2qT2PaysTRJTDdMpd662vPCASgQyxs0gJks
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "josua@tes.com",
+    "password": "jos"
+}
+
+###
+
+POST http://localhost:3000/register 
+Content-Type: application/json
+
+{
+    "name": "josua",
+    "email": "josua@tes.com",
+    "gender": "Male",
+    "password": "jos"
+}
+
+###
+
+DELETE http://localhost:3000/delete-user/4
+
+###

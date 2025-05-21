@@ -3,9 +3,31 @@ import { getNotes,
         getNoteById,
         createNote,
         updateNote,
-        deleteNote } from '../controller/UserController.js';
+        deleteNote } from '../controller/NoteController.js';
+
+import { getUsers,
+        createUser,
+        updateUser,
+        deleteUser,
+        getUserById,
+        loginHandler,
+        logout
+} from "../controller/UserController.js";
+import { refreshToken } from "../controller/RefreshToken.js";
+import { verifyToken } from "../middleware/VerifyToken.js";
+
 
 const router = express.Router();
+
+router.get('/token', refreshToken);
+router.post('/login', loginHandler);
+router.delete('/logout', logout);
+
+router.post("/register", createUser); //tambah user
+router.get("/users",verifyToken, getUsers);
+router.get("/users/:id", verifyToken,getUserById);
+router.put("/edit-user/:id", verifyToken,updateUser);
+router.delete("/delete-user/:id", deleteUser);
 
 router.get('/notes', getNotes);
 router.get('/notes/:id', getNoteById);
