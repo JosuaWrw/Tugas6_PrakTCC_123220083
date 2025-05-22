@@ -1,7 +1,7 @@
 function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
-  fetch("https://tugas5be-935996462481.us-central1.run.app/login", {
+  fetch("https://notes-be083-935996462481.us-central1.run.app/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password })
