@@ -1,3 +1,6 @@
+substitutions:
+  _ENV: "gs://tugas3tcc-jw/.env"
+
 steps:
 
   - name: "gcr.io/cloud-builders/gsutil"
