@@ -16,7 +16,7 @@ document.getElementById("edit-form").addEventListener("submit", function (e) {
     content: document.getElementById("content").value,
   };
 
-  fetch(`https://tugas5be-935996462481.us-central1.run.app/notes/${noteId}`, {
+  fetch(`https://notes-be083-935996462481.us-central1.run.app/notes/${noteId}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(note),

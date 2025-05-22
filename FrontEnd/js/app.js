@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://tugas5be-935996462481.us-central1.run.app/notes", {
+  fetch("https://notes-be083-935996462481.us-central1.run.app/notes", {
     headers: {
     'Authorization': `Bearer ${localStorage.getItem("accessToken")}`
   }
@@ -38,7 +38,7 @@ function editNote(id) {
 
 function deleteNote(id) {
   if (confirm("Apakah Anda yakin ingin menghapus catatan ini?")) {
-      fetch(`https://tugas5be-935996462481.us-central1.run.app/${id}`, { method: "DELETE" })
+      fetch(`https://notes-be083-935996462481.us-central1.run.app/${id}`, { method: "DELETE" })
           .then(() => location.reload())
           .catch(error => console.error("Gagal menghapus catatan:", error));
   }

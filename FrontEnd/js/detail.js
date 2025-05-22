@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const noteId = params.get("id");
 
   if (noteId) {
-    fetch(`https://tugas5be-935996462481.us-central1.run.app/notes/${noteId}`)
+    fetch(`https://notes-be083-935996462481.us-central1.run.app/notes/${noteId}`)
       .then(response => response.json())
       .then(note => {
         document.getElementById("title").innerText = note.title;
