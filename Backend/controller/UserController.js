@@ -149,7 +149,7 @@ async function loginHandler(req, res){
 
 //nambah logout
 async function logout(req,res){
-  const refreshToken = req.cookies.refreshToken; //mgecek refresh token sama gak sama di database
+  const refreshToken = req.cookies.refreshToken; //mgecek refresh token sama gak kayak di database
   if(!refreshToken) return res.sendStatus(204);
   const user = await User.findOne({
       where:{

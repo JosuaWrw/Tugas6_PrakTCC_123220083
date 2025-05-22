@@ -25,7 +25,7 @@ router.delete('/logout', logout);
 
 router.post("/register", createUser); //tambah user
 router.get("/users", getUsers);
-router.get("/users/:id", verifyToken,getUserById);
+router.get("/users/:id",getUserById);
 router.put("/edit-user/:id", verifyToken,updateUser);
 router.delete("/delete-user/:id", deleteUser);
 
