@@ -11,7 +11,7 @@ function register() {
   })
   .then(res => res.json())
   .then(data => {
-    if (data.status === "Success") {
+    if (data.status === "Register Berhasil") {
       alert("Pendaftaran berhasil! Silakan login.");
       location.href = "login.html";
     } else {
