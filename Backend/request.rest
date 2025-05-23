@@ -59,3 +59,7 @@ Content-Type: application/json
 DELETE http://localhost:3000/delete-user/4
 
 ###
+
+DELETE http://localhost:3000/logout
+
+###
