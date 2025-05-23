@@ -43,7 +43,6 @@ function deleteNote(id) {
           .catch(error => console.error("Gagal menghapus catatan:", error));
   }
 }
-
 function logout() {
   localStorage.removeItem("accessToken");
   location.href = "login.html";
