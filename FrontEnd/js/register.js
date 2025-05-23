@@ -1,7 +1,7 @@
 function register() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
-  const gender = document.getElementById("gender").value;
+  const gender = document.getElementById("gender").value; // test
   const password = document.getElementById("password").value;
 
   fetch("https://notes-be083-935996462481.us-central1.run.app/register", {
