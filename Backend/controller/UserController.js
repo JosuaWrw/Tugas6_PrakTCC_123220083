@@ -34,7 +34,7 @@ async function createUser(req, res) {
         password: encryptPassword
         
     });
-    res.status(201).json({msg:"Register Berhasil"});
+    res.status(201).json({ status: "Success", msg: "Register Berhasil" });
 } catch(error){
     console.log(error.message);
 }
